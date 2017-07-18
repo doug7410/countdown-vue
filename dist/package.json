@@ -1,0 +1,10 @@
+{
+  "name": "countdown",
+  "version": "1.0.0",
+  "description": "countdown",
+  "author": "Doug Steinberg",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm install express"
+  }
+}
