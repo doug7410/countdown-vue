@@ -5,7 +5,7 @@
     <ul v-for="image in countdown.images">
       <li>
         <span @click="removeImage(image.id)">X</span>
-        <img :src="`http://countdown.dev/storage/${image.path}`">
+        <img :src="image.path">
       </li>
     </ul>
   </div>

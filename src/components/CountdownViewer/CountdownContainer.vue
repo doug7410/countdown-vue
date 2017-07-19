@@ -11,7 +11,7 @@
     <div class="clock-wrapper">
       <clock :trip-date="currentCountdown.date"></clock>
       <div class="hidden" v-for="image in currentCountdown.images">
-        <img :src="'http://countdown.dev/storage/' + image.path">
+        <img :src="image.path">
       </div>
     </div>
   </div>
@@ -53,7 +53,7 @@
         }, 6000)
       },
       getImageUrl (images) {
-        return 'url(http://countdown.dev/storage/' + images[this.currentImageNumber].path + ')'
+        return 'url(' + images[this.currentImageNumber].path + ')'
       }
     },
 
