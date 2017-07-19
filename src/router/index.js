@@ -11,7 +11,6 @@ import EditCountdownForm from '../components/Dashboard/EditCountdownForm'
 Vue.use(Router)
 
 const router = new Router({
-  mode: 'history',
   routes: [
     {
       path: '/',
