@@ -20,7 +20,7 @@ export default {
       const postData = {
         grant_type: 'password',
         client_id: clientID,
-        client_secret: clientSecret,
+        client_secret: 'Mh25IfvWx1NiRNIaPrHyCTaz5A5fA0QEgB9g0rXg',
         username: email,
         password: password,
         scope: ''
