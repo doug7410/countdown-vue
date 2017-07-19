@@ -1,12 +1,11 @@
-// var history = require('connect-history-api-fallback');
+var history = require('connect-history-api-fallback');
 
 var express = require('express');
 var path = require('path');
 var serveStatic = require('serve-static');
 app = express();
 
-// middleware https://stackoverflow.com/questions/44982580/vuewebpack-app-deploy-on-heroku-not-working-when-page-is-refreshed
-// app.use(history());
+app.use(history());
 
 app.use(serveStatic(__dirname));
 var port = process.env.PORT || 5000;
