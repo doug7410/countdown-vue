@@ -1,7 +1,5 @@
 import store from './vuex/store'
-
-// export const apiDomain = 'http://countdown.dev/'
-export const apiDomain = 'https://countdown-api.herokuapp.com/'
+export const apiDomain = process.env.API_BASE_URL
 
 export const getHeader = function () {
   return {

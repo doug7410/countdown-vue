@@ -71,7 +71,7 @@
         this.updateCountdown({
           id: this.currentCountdown.id,
           name: this.name,
-          date: this.date
+          date: this.formattedDate
         })
       }
     },
