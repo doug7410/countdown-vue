@@ -2,16 +2,15 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import store from '../vuex/store'
 import LoginPage from '../components/Login/LoginPage'
-import CountdownList from '../components/Dashboard/CountdownList'
 import Dashboard from '../components/Dashboard/Dashboard'
-import Countdown from '../components/CountdownViewer/CountdownContainer'
 import CountdownForm from '../components/Dashboard/CountdownForm'
+import CountdownList from '../components/Dashboard/CountdownList'
+import Countdown from '../components/CountdownViewer/CountdownContainer'
 import EditCountdownForm from '../components/Dashboard/EditCountdownForm'
 
 Vue.use(Router)
 
 const router = new Router({
-  mode: 'history',
   routes: [
     {
       path: '/',
