@@ -43,11 +43,9 @@
           }
         )
       })
-
+      this.getCountdown(this.$route.params.id)
       this.name = this.currentCountdown.name
       this.date = this.currentCountdown.date
-
-      this.getImages()
     },
     data () {
       return {
@@ -66,7 +64,7 @@
       }
     },
     methods: {
-      ...mapActions(['updateCountdown', 'getImages']),
+      ...mapActions(['updateCountdown', 'getImages', 'getCountdown']),
       update () {
         this.updateCountdown({
           id: this.currentCountdown.id,

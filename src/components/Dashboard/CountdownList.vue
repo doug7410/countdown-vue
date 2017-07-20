@@ -14,9 +14,6 @@
   import { mapActions, mapGetters } from 'vuex'
   export default{
     name: 'countdown-list',
-    created () {
-      this.getCountdowns()
-    },
     computed: {
       ...mapGetters(['countdowns'])
     },

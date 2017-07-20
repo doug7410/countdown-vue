@@ -13,8 +13,8 @@ export default {
       data.append('countdown_id', getters.currentCountdown.id)
       http.post('api/images', data, {
         headers: {...getHeader(), ...{'content-type': 'multipart/form-data'}}
-      }).then((countdownImages) => {
-        commit('SET_IMAGES', countdownImages.data)
+      }).then((image) => {
+        commit('ADD_IMAGE_TO_COUNTDOWN', image.data)
       })
     },
     removeImage ({getters, commit}, id) {

@@ -23,9 +23,11 @@ export default {
         commit('UPDATE_CURRENT_COUNTDOWN', response.data)
       })
     },
-    getCountdown ({ commit }, id) {
-      return http.get(`/api/countdown/${id}`, {headers: getHeader()}).then((response) => {
-        commit('SET_CURRENT_COUNTDOWN', response.data)
+    getCountdown ({ commit, getters }, id) {
+      getters.countdowns.forEach((countdown) => {
+        if (countdown.id.toString() === id.toString()) {
+          commit('SET_CURRENT_COUNTDOWN', countdown)
+        }
       })
     },
     getCountdowns ({ commit }) {
@@ -59,6 +61,9 @@ export default {
     },
     REMOVE_IMAGE_FROM_COUNTDOWN (state, index) {
       state.currentCountdown.images.splice(index, 1)
+    },
+    ADD_IMAGE_TO_COUNTDOWN (state, image) {
+      state.currentCountdown.images.push(image)
     }
   }
 }

@@ -1,7 +1,6 @@
 <template>
   <div class="image-list">
     <file-select v-model="image"></file-select>
-    <button class="btn btn-default" @click="addImage()">Add Image</button>
     <ul v-for="image in countdown.images">
       <li>
         <span @click="removeImage(image.id)">X</span>
@@ -27,6 +26,11 @@
     computed: {
       imageName () {
         JSON.stringify(this.image)
+      }
+    },
+    watch: {
+      image: function () {
+        this.addImage()
       }
     },
     methods: {

@@ -16,7 +16,7 @@ export default {
   },
 
   actions: {
-    requestLogin ({commit}, {email, password}) {
+    requestLogin ({commit, dispatch}, {email, password}) {
       const postData = {
         grant_type: 'password',
         client_id: clientID,
@@ -31,6 +31,7 @@ export default {
           commit('SAVE_TOKEN', response.data)
           return http.get('api/user', {headers: getHeader()}).then((response) => {
             commit('SET_USER', response.data)
+            dispatch('getCountdowns')
           })
         }
       })

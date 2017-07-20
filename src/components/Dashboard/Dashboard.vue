@@ -14,6 +14,7 @@
 
 <script>
   import TopMenu from '../Nav/TopMenu'
+
   export default{
     name: 'dashboard',
     components: {
